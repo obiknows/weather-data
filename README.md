@@ -3,7 +3,7 @@
 
 
 This data stream acquired using the
-[souncloud api](https://developers.soundcloud.com/docs/api/reference)
+[OpenWeatherMap API](http://openweathermap.org/current)
 polls soundcloud every 5 seconds to see if someone has created any new music on the 
 platform.
 
