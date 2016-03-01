@@ -4,12 +4,14 @@
 
 This data stream acquired using the
 [OpenWeatherMap API](http://openweathermap.org/current)
-polls soundcloud every 5 seconds to see if someone has created any new music on the 
-platform.
+polls soundcloud every 2 seconds to grab the current air pressure for
+the 10027 zipcode and stores that in a redis store. At the same time,
+on every entry on the redis store, we calculate a moving average of the
+air pressure and we send an alert via twitter, alerting us of the chance
+of rain.
 
 
-
-### Usage
+### Usage (TBD)
 
 1. clone and get up in that folder
 2. `websocketd --port=8080 --staticdir=. python monitor-soundcloud.py`
