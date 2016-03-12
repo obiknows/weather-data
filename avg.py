@@ -34,7 +34,13 @@ while True:
     else:
         rate = 0
 
+    # Rate notifications
+    # If the rate is
+    #   less than -5   - "storm's a coming"
+    #   greater than 5 - "clear skies ahead"
+
+
     print ( json.dumps({"rate":rate}) )
     sys.stdout.flush()
 
-    time.sleep( 2 )
+    time.sleep( 5 )
