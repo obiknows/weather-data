@@ -3,9 +3,8 @@
 
 
 This data stream acquired using the
-[OpenWeatherMap API](http://openweathermap.org/current)
-polls the OpenWeatherMap every 2 seconds to grab the current air pressure for
-the 10027 zipcode and stores that in a redis store. At the same time,
+[The Dark Sky Forecast API](https://developer.forecast.io/)
+polls the API every minute to grab the distance of the nearest storm to Columbia University (rel. to [Butler Library](https://en.wikipedia.org/wiki/Butler_Library))  and stores that in a redis store. At the same time,
 on every entry on the redis store, we calculate a moving average of the
 air pressure and we send an alert via twitter, alerting us of the chance
 of rain.

@@ -1,7 +1,7 @@
 #
 # check-weather.py
 #
-# by - sam nnodim
+# by - sam nnodim (son2105)
 #
 # adapted from: https://github.com/mikedewar/RealTimeStorytelling
 
@@ -15,21 +15,22 @@ import time
 # this script polls the soundcloud API, looking for new songs uploaded to
 # the platform.
 
-url = "http://api.openweathermap.org/data/2.5/weather?id=4900961&appid="
-apikey = "b1b15e88fa797225412429c1c50c122a" # OpenWeatherMap API key
+url = "https://api.forecast.io/forecast/"
+apikey = "4ec099acc7de343d9c3db9d286aca570" # DarkSkyForecast API key
+coords = "/40.806290,-73.963005" # lat, long coordinates
 
 # Set poission param. (2 minutes)
 rate = 60
 
 while True:
     # send a GET request to the OWM API and turn it to JSON data
-    data = requests.get( url + apikey ).json()
+    data = requests.get( url + apikey + coords ).json()
 
-    # get the pressure from the data
-    pressure = data["main"]["pressure"]
+    # get the distance of the nearest storm from the data
+    storm = data["currently"]["nearestStormDistance"]
 
     # Print current weather pressure from params
-    print ( json.dumps({"pressure": pressure}) )
+    print ( json.dumps({"stormDistance": storm}) )
     stdout.flush()
 
     # set the sleep rate as a randomn exponential value
