@@ -12,9 +12,7 @@ import requests
 import json
 import time
 
-# this script polls the soundcloud API, looking for new songs uploaded to
-# the platform.
-
+#
 url = "https://api.forecast.io/forecast/"
 apikey = "4ec099acc7de343d9c3db9d286aca570" # DarkSkyForecast API key
 coords = "/40.806290,-73.963005" # lat, long coordinates
