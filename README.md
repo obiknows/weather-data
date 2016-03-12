@@ -19,5 +19,5 @@ of rain.
 3. In another run the command:
 
 		./pipeline.sh
-4. Observe the Twitter account: [@fd]()
+4. Observe the Twitter account: [@realtimetestin](https://twitter.com/realtimetestin)
 5. Bask in the beauty of the notifications
