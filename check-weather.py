@@ -17,7 +17,7 @@ url = "https://api.forecast.io/forecast/"
 apikey = "4ec099acc7de343d9c3db9d286aca570" # DarkSkyForecast API key
 coords = "/40.806290,-73.963005" # lat, long coordinates
 
-# Set poission param. (2 minutes)
+# Set poission param.
 rate = 20
 
 while True:
